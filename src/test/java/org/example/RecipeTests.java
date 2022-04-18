@@ -1,17 +1,13 @@
 package org.example;
 
-import io.restassured.path.json.JsonPath;
-import io.restassured.response.Response;
+import io.qameta.allure.restassured.AllureRestAssured;
+import io.restassured.RestAssured;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeAll;
 
-import static io.restassured.RestAssured.given;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static io.restassured.RestAssured.filters;
-import static io.restassured.AllureRestAssured;
-
 
 public class RecipeTests
 {
