@@ -10,6 +10,7 @@ import org.junit.jupiter.api.BeforeAll;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static io.restassured.RestAssured.given;
 
 public class RecipeTests
 {
