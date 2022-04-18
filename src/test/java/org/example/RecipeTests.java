@@ -3,6 +3,7 @@ package org.example;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeAll;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -12,6 +13,12 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class RecipeTests
 {
+    @BeforeAll
+static void beforeAll() {
+//for logging request and responses in Allure reporting
+RestAssured.filters(new AllureRestAssured());
+}
+
     @Test
     void getRecipePositiveQueryTest() {
         given()
